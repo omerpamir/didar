@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sevgili Didar Öğretmenim</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Georgia', serif;
+            background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%);
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 2rem;
+            position: relative;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 3rem;
+            animation: fadeInDown 1s ease-out;
+        }
+
+        .main-title {
+            font-size: 3rem;
+            color: #d73527;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+            margin-bottom: 1rem;
+            animation: pulse 2s infinite;
+        }
+
+        .subtitle {
+            font-size: 1.4rem;
+            color: #8b4513;
+            font-style: italic;
+        }
+
+        .content {
+            background: rgba(255, 255, 255, 0.9);
+            padding: 3rem;
+            border-radius: 25px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+            backdrop-filter: blur(10px);
+            margin-bottom: 2rem;
+            animation: fadeInUp 1s ease-out 0.5s both;
+        }
+
+        .message {
+            font-size: 1.2rem;
+            line-height: 1.8;
+            color: #4a4a4a;
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .highlight {
+            color: #d73527;
+            font-weight: bold;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+        }
+
+        .activities {
+            background: #fff3e0;
+            padding: 2rem;
+            border-radius: 15px;
+            margin: 2rem 0;
+            border-left: 5px solid #ff9800;
+        }
+
+        .activities h3 {
+            color: #e65100;
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            text-align: center;
+        }
+
+        .activity-list {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .activity-item {
+            background: white;
+            padding: 1rem;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+            min-width: 150px;
+        }
+
+        .activity-item:hover {
+            transform: translateY(-5px);
+        }
+
+        .activity-icon {
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .motivational-quote {
+            background: #e8f5e8;
+            padding: 2rem;
+            border-radius: 15px;
+            margin: 2rem 0;
+            text-align: center;
+            border: 3px solid #4caf50;
+            position: relative;
+        }
+
+        .quote-text {
+            font-size: 1.3rem;
+            color: #2e7d32;
+            font-style: italic;
+            font-weight: bold;
+        }
+
+        .floating-hearts {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: -1;
+        }
+
+        .heart {
+            position: absolute;
+            font-size: 1.5rem;
+            color: rgba(255, 182, 193, 0.6);
+            animation: float 6s infinite linear;
+        }
+
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes pulse {
+            0%, 100% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.05);
+            }
+        }
+
+        @keyframes float {
+            0% {
+                transform: translateY(100vh) rotate(0deg);
+                opacity: 0;
+            }
+            10% {
+                opacity: 1;
+            }
+            90% {
+                opacity: 1;
+            }
+            100% {
+                transform: translateY(-100px) rotate(360deg);
+                opacity: 0;
+            }
+        }
+
+        .footer {
+            text-align: center;
+            padding: 2rem;
+            color: #8b4513;
+            font-size: 1.1rem;
+            animation: fadeInUp 1s ease-out 1s both;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 1rem;
+            }
+            
+            .main-title {
+                font-size: 2rem;
+            }
+            
+            .content {
+                padding: 2rem;
+            }
+            
+            .message {
+                font-size: 1.1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="floating-hearts">
+        <div class="heart" style="left: 10%; animation-delay: 0s;">💖</div>
+        <div class="heart" style="left: 20%; animation-delay: 1s;">🌸</div>
+        <div class="heart" style="left: 30%; animation-delay: 2s;">💕</div>
+        <div class="heart" style="left: 40%; animation-delay: 3s;">🌺</div>
+        <div class="heart" style="left: 50%; animation-delay: 4s;">💖</div>
+        <div class="heart" style="left: 60%; animation-delay: 5s;">🌸</div>
+        <div class="heart" style="left: 70%; animation-delay: 6s;">💕</div>
+        <div class="heart" style="left: 80%; animation-delay: 7s;">🌺</div>
+        <div class="heart" style="left: 90%; animation-delay: 8s;">💖</div>
+    </div>
+
+    <div class="container">
+        <div class="header">
+            <h1 class="main-title">Sevgili Didar Öğretmenim 🌟</h1>
+            <p class="subtitle">En Değerli Anaokulu Öğretmenimiz</p>
+        </div>
+
+        <div class="content">
+            <div class="message">
+                Merhaba <span class="highlight">canım arkadaşım Didar</span>! 
+                <br><br>
+                Bu küçük sürprizi sana hazırlamak istedim çünkü ne kadar <span class="highlight">harika bir insan</span> olduğunu 
+                ve işini ne kadar <span class="highlight">sevgiyle yaptığını</span> herkese anlatmak istiyorum.
+                <br><br>
+                Seni tanıdığım günden beri, o küçük kalplere nasıl dokunduğunu, onları nasıl güldürdüğünü 
+                ve her gün onlar için ne kadar emek verdiğini görüyorum. Sen gerçekten 
+                <span class="highlight">altın kalpli bir öğretmensin</span>! 🎨
+            </div>
+
+            <div class="motivational-quote">
+                <p class="quote-text">
+                    "Seninle tanıştığım için çok şanslıyım! Çocuklara verdiğin sevgi ve emek, 
+                    onların hayatlarında iz bırakıyor. Sen sadece öğretmen değil, aynı zamanda 
+                    çok değerli bir arkadaşsın!" 
+                </p>
+            </div>
+
+            <div class="message">
+                Biliyorum ki bazen yoruluyorsun, bazen de kendini yetersiz hissediyorsun. 
+                Ama ben sana şunu söylemek istiyorum: <span class="highlight">Sen inanılmaz güçlü ve yetenekli bir kadınsın!</span>
+                <br><br>
+                O çocuklar seni çok seviyor, aileleri sana güveniyor ve ben de seninle arkadaş olmaktan 
+                <span class="highlight">çok gurur duyuyorum</span>. 
+                <br><br>
+                Ne zaman moralin bozulsa, ne zaman "yapabilir miyim?" diye düşünsen, 
+                bu sayfayı aç ve şunu hatırla: <span class="highlight">Sen muhteşemsin ve her şeyin üstesinden geliyorsun!</span> 
+                <br><br>
+                Arkandayım, yanındayım ve senin bu güzel kalbinin ve emeklerinin 
+                <span class="highlight">hak ettiği tüm güzellikleri yaşamanı diliyorum</span>! 🌈
+                <br><br>
+                Sen <span class="highlight">harikasın</span>! 💕
+            </div>
+        </div>
+
+        <div class="footer">
+            <p><em>💖 "En güzel dostluklar, birbirimizi olduğumuz gibi kabul ettiğimizde başlar." 💖</em></p>
+        </div>
+    </div>
+
+    <script>
+        // Dinamik kalp oluşturma
+        function createHeart() {
+            const heart = document.createElement('div');
+            heart.className = 'heart';
+            heart.innerHTML = ['💖', '🌸', '💕', '🌺'][Math.floor(Math.random() * 4)];
+            heart.style.left = Math.random() * 100 + '%';
+            heart.style.animationDelay = Math.random() * 5 + 's';
+            heart.style.fontSize = (Math.random() * 1 + 1) + 'rem';
+            
+            document.querySelector('.floating-hearts').appendChild(heart);
+            
+            setTimeout(() => {
+                heart.remove();
+            }, 6000);
+        }
+
+        // Her 2 saniyede bir yeni kalp oluştur
+        setInterval(createHeart, 2000);
+
+        // Sayfa yüklendiğinde hoş geldin animasyonu
+        window.addEventListener('load', function() {
+            setTimeout(() => {
+                const title = document.querySelector('.main-title');
+                title.style.color = '#ff6b6b';
+                setTimeout(() => {
+                    title.style.color = '#d73527';
+                }, 500);
+            }, 2000);
+        });
+    </script>
+</body>
+</html>
